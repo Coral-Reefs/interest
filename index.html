@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interest</title>
+    <link rel="stylesheet" href="assets/css/output.css" />
+  </head>
+  <body>
+    <nav
+      class="bg-[#fcc0d482] backdrop-blur shadow-lg border-b-2 border-solid border-white top-0 fixed h-20 w-screen left-1/2 -translate-x-1/2 rounded-b-xl z-50"
+    >
+      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 h-full">
+        <div class="relative flex h-full items-center justify-between">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <!-- Mobile menu button-->
+            <button
+              type="button"
+              class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span class="absolute -inset-0.5"></span>
+              <span class="sr-only">Open main menu</span>
+
+              <svg
+                class="block h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+              <svg
+                class="hidden h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+          >
+            <div class="hidden sm:ml-6 sm:block">
+              <div class="flex space-x-4">
+                <a
+                  href="#intro"
+                  class="text-white rounded-md px-3 py-2 text-sm font-medium"
+                  aria-current="page"
+                  >Introduction</a
+                >
+                <a
+                  href="#timeline"
+                  class="text-white hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  >Timeline</a
+                >
+                <a
+                  href="#wishlist"
+                  class="text-white hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  >Wishlist</a
+                >
+                <a
+                  href="#recipe"
+                  class="text-white hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  >Recipe</a
+                >
+                <a
+                  href="#fun"
+                  class="text-white hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  >Fun facts</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="sm:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2 bg-[#fcc0d482] backdrop-blur">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-white hover:text-white" -->
+          <a
+            href="#intro"
+            class="text-white block rounded-md px-3 py-2 text-base font-medium"
+            aria-current="page"
+            >Introduction</a
+          >
+          <a
+            href="#timeline"
+            class="text-white hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            >Timeline</a
+          >
+          <a
+            href="#wishlist"
+            class="text-white hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            >Wishlist</a
+          >
+          <a
+            href="#recipe"
+            class="text-white hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            >Recipe</a
+          >
+          <a
+            href="#fun"
+            class="text-white hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            >Recipe</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <header
+      class="home h-screen flex items-center justify-center bg-[url('../images/bg-1.png')] bg-cover bg-no-repeat bg-center"
+    >
+      <div
+        class="bg-[url('../images/cakestand.PNG')] sm:w-[500px] w-[300px] aspect-1 bg-cover bg-no-repeat flex flex-col items-center"
+      >
+        <div class="h-[30%] text-center">
+          <div class="group h-full cursor-pointer">
+            <a href="#intro">
+              <img
+                class="h-full group-hover:-translate-y-5 duration-500"
+                src="assets/images/cake1.png"
+                alt=""
+              />
+              <p
+                class="opacity-0 group-hover:-translate-y-3 group-hover:opacity-100 duration-500"
+              >
+                intro
+              </p>
+            </a>
+          </div>
+        </div>
+        <div class="h-[30%] flex text-center">
+          <a href="#timeline">
+            <div class="group h-full cursor-pointer">
+              <img
+                class="h-full group-hover:-translate-y-5 duration-500"
+                src="assets/images/cake2.png"
+                alt=""
+              />
+              <p
+                class="opacity-0 group-hover:-translate-y-4 group-hover:opacity-100 duration-500"
+              >
+                timeline
+              </p>
+            </div>
+          </a>
+          <div class="group h-full cursor-pointer">
+            <a href="#wishlist">
+              <img
+                class="h-full group-hover:-translate-y-5 duration-500"
+                src="assets/images/cake3.png"
+                alt=""
+              />
+              <p
+                class="opacity-0 group-hover:-translate-y-4 group-hover:opacity-100 duration-500"
+              >
+                wishlist
+              </p>
+            </a>
+          </div>
+        </div>
+        <div class="h-[30%] flex sm:space-x-20 space-x-10 text-center">
+          <a href="#recipe">
+            <div class="group h-full cursor-pointer">
+              <img
+                class="h-full group-hover:-translate-y-5 duration-500"
+                src="assets/images/cake4.png"
+                alt=""
+              />
+              <p
+                class="opacity-0 group-hover:-translate-y-4 group-hover:opacity-100 duration-500"
+              >
+                recipe
+              </p>
+            </div>
+          </a>
+          <div class="group h-full cursor-pointer">
+            <a href="#fun">
+              <img
+                class="h-full group-hover:-translate-y-5 duration-500"
+                src="assets/images/cake5.png"
+                alt=""
+              />
+              <p
+                class="opacity-0 group-hover:-translate-y-4 group-hover:opacity-100 duration-500"
+              >
+                fun facts
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section
+        id="intro"
+        class="intro [background:rgba(0,0,0,0.2)_url('../images/bg-4.png')] bg-blend-darken bg-cover bg-no-repeat bg-center font-[writing] flex justify-center min-h-screen items-center"
+      >
+        <div class="flex items-center group flex-col md:flex-row my-10">
+          <div
+            class="intro-img overflow-hidden md:w-[calc(100vw/2)] md:h-[calc(100vh*3/5)] sm:w-[calc(100vw*0.6)] w-[calc(100vw*0.9)] rounded-2xl relative group-hover:md:w-[calc(100vw/4)] duration-300"
+          >
+            <img
+              src="assets/images/baking.png"
+              class="w-full h-full object-cover object-center"
+              alt=""
+            />
+            <div
+              class="absolute w-full h-full bottom-0 flex flex-col justify-end text-white shadow-[inset_0px_-200px_150px_-80px_rgba(0,0,0,0.8)] p-5 md:ps-10 md:pe-[50%] duration-300 delay-75 group-hover:shadow-[inset_0px_-220px_150px_-150px_rgba(0,0,0,0.8)]"
+            >
+              <h1 class="font-serif text-3xl md:text-5xl duration-300">
+                Baking
+              </h1>
+              <p class="opacity-80 group-hover:opacity-0 duration-300">
+                /ˈbeɪkɪŋ/
+              </p>
+              <p class="group-hover:opacity-0 group-hover:hidden">
+                the action of cooking food by dry heat without direct exposure
+                to a flame, typically in an oven.
+              </p>
+            </div>
+          </div>
+          <div
+            class="intro-text text-white backdrop-blur bg-[#ffffff46] md:h-[calc(100vh/2)] md:w-0 w-[calc(100vw*0.9)] overflow-hidden duration-500 delay-75 md:group-hover:w-[calc(100vw/3)] md:rounded-l-none border-r-[rgba(255,255,255,0.3)] border-r-solid border-r-2 border-t-[rgba(255,255,255,0.3)] border-t-solid border-t-2 md:group-hover:p-7 md:p-0 p-7 rounded-xl md:text-lg"
+          >
+            It all started for me when I was just 12 years old. Tthe textbook
+            definition of baking is just popping something into the oven to let
+            it cook. But in my opinion, baking is so much more than that. It's
+            about the whole process. There's just something special about
+            getting your hands into the flour, mixing up ingredients, and
+            watching them transform into delicious treats in the oven. What
+            makes it even better is doing it with my family!
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="timeline"
+        class="timeline bg-[url('../images/bg-2.png')] bg-cover bg-no-repeat bg-center whitespace-nowrap overflow-x-hidden font-[writing]"
+      >
+        <div
+          id="modal"
+          class="modal fixed z-50 w-screen h-screen top-0 left-0 bg-[#00000060] hidden justify-center items-center"
+        >
+          <span class="close">&times;</span>
+          <img
+            class="modal-content md:w-1/3 w-5/6 rounded-xl"
+            id="modal-image"
+          />
+        </div>
+        <h1 class="text-center text-4xl font-[cute] text-white mt-10">
+          <span
+            ><img class="w-60 hidden sm:inline" src="assets/images/div.png"
+          /></span>
+          Timeline
+          <span
+            ><img
+              class="sm:inline hidden w-60 -scale-x-100"
+              src="assets/images/div.png"
+          /></span>
+        </h1>
+        <ol class="w-screen py-96 duration-300 overflow-scroll scrollbar-hide">
+          <li class="relative inline-block list-none w-60 h-[3px] bg-white">
+            <div
+              class="absolute left-[calc(100%+7px)] w-60 whitespace-normal bg-white flex flex-col hover:shadow-xl hover:w-72 duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)]"
+            >
+              <img
+                src="assets/images/21jul.jpg"
+                class="aspect-1 object-cover cursor-pointer"
+                onclick="openModal(this.src)"
+              />
+              <time class="font-bold text-lg block p-2 px-3">2021 July</time>
+            </div>
+            <span
+              class="absolute top-1/2 left-[calc(100%+1px)] bottom-0 w-3 h-3 -translate-y-1/2 rounded-full bg-red-400"
+            ></span>
+          </li>
+
+          <li
+            class="relative inline-block list-none w-60 h-[3px] bg-white ml-4"
+          >
+            <div
+              class="absolute left-[calc(100%+7px)] w-60 whitespace-normal bg-white flex flex-col hover:shadow-xl hover:w-72 duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)]"
+            >
+              <img
+                src="assets/images/21aug.jpg"
+                class="aspect-1 object-cover cursor-pointer"
+                onclick="openModal(this.src)"
+                alt=""
+              />
+              <time class="font-bold text-lg block p-2 px-3">2021 August</time>
+            </div>
+            <span
+              class="absolute top-1/2 left-[calc(100%+1px)] bottom-0 w-3 h-3 -translate-y-1/2 rounded-full bg-red-400"
+            ></span>
+          </li>
+
+          <li
+            class="relative inline-block list-none w-60 h-[3px] bg-white ml-4"
+          >
+            <div
+              class="absolute left-[calc(100%+7px)] w-60 whitespace-normal bg-white flex flex-col hover:shadow-xl hover:w-72 duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)]"
+            >
+              <img
+                src="assets/images/21oct.jpg"
+                class="aspect-1 object-cover cursor-pointer"
+                onclick="openModal(this.src)"
+                alt=""
+              />
+              <time class="font-bold text-lg block p-2 px-3">2021 October</time>
+            </div>
+            <span
+              class="absolute top-1/2 left-[calc(100%+1px)] bottom-0 w-3 h-3 -translate-y-1/2 rounded-full bg-red-400"
+            ></span>
+          </li>
+
+          <li
+            class="relative inline-block list-none w-60 h-[3px] bg-white ml-4"
+          >
+            <div
+              class="absolute left-[calc(100%+7px)] w-60 whitespace-normal bg-white flex flex-col hover:shadow-xl hover:w-72 duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)]"
+            >
+              <img
+                src="assets/images/21nov.jpg"
+                class="aspect-1 object-cover cursor-pointer"
+                onclick="openModal(this.src)"
+                alt=""
+              />
+              <time class="font-bold text-lg block p-2 px-3"
+                >2021 November</time
+              >
+            </div>
+            <span
+              class="absolute top-1/2 left-[calc(100%+1px)] bottom-0 w-3 h-3 -translate-y-1/2 rounded-full bg-red-400"
+            ></span>
+          </li>
+
+          <li
+            class="relative inline-block list-none w-60 h-[3px] bg-white ml-4"
+          >
+            <div
+              class="absolute left-[calc(100%+7px)] w-60 whitespace-normal bg-white flex flex-col hover:shadow-xl hover:w-72 duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)]"
+            >
+              <img
+                src="assets/images/22jan.jpg"
+                class="aspect-1 object-cover cursor-pointer"
+                onclick="openModal(this.src)"
+                alt=""
+              />
+              <time class="font-bold text-lg block p-2 px-3">2022 January</time>
+            </div>
+            <span
+              class="absolute top-1/2 left-[calc(100%+1px)] bottom-0 w-3 h-3 -translate-y-1/2 rounded-full bg-red-400"
+            ></span>
+          </li>
+
+          <li
+            class="relative inline-block list-none w-60 h-[3px] bg-white ml-4"
+          >
+            <div
+              class="absolute left-[calc(100%+7px)] w-60 whitespace-normal bg-white flex flex-col hover:shadow-xl hover:w-72 duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)]"
+            >
+              <img
+                src="assets/images/22feb.jpg"
+                class="aspect-1 object-cover cursor-pointer"
+                onclick="openModal(this.src)"
+                alt=""
+              />
+              <time class="font-bold text-lg block p-2 px-3"
+                >2022 February</time
+              >
+            </div>
+            <span
+              class="absolute top-1/2 left-[calc(100%+1px)] bottom-0 w-3 h-3 -translate-y-1/2 rounded-full bg-red-400"
+            ></span>
+          </li>
+
+          <li
+            class="relative inline-block list-none w-60 h-[3px] bg-white ml-4"
+          >
+            <div
+              class="absolute left-[calc(100%+7px)] w-60 whitespace-normal bg-white flex flex-col hover:shadow-xl hover:w-72 duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)]"
+            >
+              <img
+                src="assets/images/22mar.jpg"
+                class="aspect-1 object-cover cursor-pointer"
+                onclick="openModal(this.src)"
+                alt=""
+              />
+              <time class="font-bold text-lg block p-2 px-3">2022 March</time>
+            </div>
+            <span
+              class="absolute top-1/2 left-[calc(100%+1px)] bottom-0 w-3 h-3 -translate-y-1/2 rounded-full bg-red-400"
+            ></span>
+          </li>
+
+          <li
+            class="relative inline-block list-none w-60 h-[3px] bg-white ml-4"
+          >
+            <div
+              class="absolute left-[calc(100%+7px)] w-60 whitespace-normal bg-white flex flex-col hover:shadow-xl hover:w-72 duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)]"
+            >
+              <img
+                src="assets/images/22dec.jpg"
+                class="aspect-1 object-cover cursor-pointer"
+                onclick="openModal(this.src)"
+                alt=""
+              />
+              <time class="font-bold text-lg block p-2 px-3"
+                >2022 December</time
+              >
+            </div>
+            <span
+              class="absolute top-1/2 left-[calc(100%+1px)] bottom-0 w-3 h-3 -translate-y-1/2 rounded-full bg-red-400"
+            ></span>
+          </li>
+
+          <li
+            class="relative inline-block list-none w-60 h-[3px] bg-white ml-4"
+          >
+            <div
+              class="absolute left-[calc(100%+7px)] w-60 whitespace-normal bg-white flex flex-col hover:shadow-xl hover:w-72 duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)]"
+            >
+              <img
+                src="assets/images/23feb.jpg"
+                class="aspect-1 object-cover cursor-pointer"
+                onclick="openModal(this.src)"
+                alt=""
+              />
+              <time class="font-bold text-lg block p-2 px-3"
+                >2023 February</time
+              >
+            </div>
+            <span
+              class="absolute top-1/2 left-[calc(100%+1px)] bottom-0 w-3 h-3 -translate-y-1/2 rounded-full bg-red-400"
+            ></span>
+          </li>
+
+          <li
+            class="relative inline-block list-none w-60 h-[3px] bg-white ml-4"
+          >
+            <div
+              class="absolute left-[calc(100%+7px)] w-60 whitespace-normal bg-white flex flex-col hover:shadow-xl hover:w-72 duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)]"
+            >
+              <img
+                src="assets/images/23dec.jpg"
+                class="aspect-1 object-cover cursor-pointer"
+                onclick="openModal(this.src)"
+                alt=""
+              />
+              <time class="font-bold text-lg block p-2 px-3"
+                >2023 December</time
+              >
+            </div>
+            <span
+              class="absolute top-1/2 left-[calc(100%+1px)] bottom-0 w-3 h-3 -translate-y-1/2 rounded-full bg-red-400"
+            ></span>
+          </li>
+
+          <li
+            class="relative inline-block list-none w-96 h-[3px] bg-white ml-4"
+          ></li>
+        </ol>
+      </section>
+      <section
+        id="wishlist"
+        class="wishlist bg-[url('../images/bg-3.png')] h-screen bg-cover bg-no-repeat bg-center whitespace-nowrap overflow-x-hidden sm:px-[5%] py-28 flex justify-center relative"
+      >
+        <img
+          src="assets/images/shelf.png"
+          class="absolute top-1/2 -translate-y-[100%] sm:hidden"
+          alt=""
+        />
+        <h1 class="absolute top-10 text-center text-4xl font-[cute] text-white">
+          <span
+            ><img class="sm:inline hidden w-60" src="assets/images/div.png"
+          /></span>
+          Wishlist
+          <span
+            ><img
+              class="sm:inline hidden w-60 -scale-x-100"
+              src="assets/images/div.png"
+          /></span>
+        </h1>
+        <div
+          class="grid sm:grid-cols-4 grid-cols-2 place-content-end sm:gap-x-[2%] sm:w-auto w-[300px] gap-x-[5%] gap-y-20 z-10"
+        >
+          <div class="flex items-end justify-center group">
+            <img src="assets/images/oven.png" alt="" />
+            <div
+              class="lg:w-72 md:w-52 w-32 h-0 lg:group-hover:h-72 md:group-hover:h-52 group-hover:h-32 opacity-100 md:opacity-0 md:group-hover:opacity-100 absolute lg:group-hover:-translate-y-40 md:group-hover:-translate-y-32 group-hover:-translate-y-20 duration-1000 rounded-xl shadow-xl overflow-hidden"
+            >
+              <img src="assets/images/oven1.jpg" alt="" />
+            </div>
+          </div>
+          <div class="flex items-end justify-center group">
+            <img class="w-3/4" src="assets/images/cups.png" alt="" />
+            <div
+              class="lg:w-72 md:w-52 w-32 h-0 lg:group-hover:h-72 md:group-hover:h-52 group-hover:h-32 opacity-100 md:opacity-0 md:group-hover:opacity-100 absolute lg:group-hover:-translate-y-40 md:group-hover:-translate-y-32 group-hover:-translate-y-20 duration-1000 rounded-xl shadow-xl overflow-hidden"
+            >
+              <img src="assets/images/meas_cup.webp" alt="" />
+            </div>
+          </div>
+          <div class="flex items-end justify-center group">
+            <img src="assets/images/whisk.png" alt="" />
+            <div
+              class="lg:w-72 md:w-52 w-32 h-0 lg:group-hover:h-72 md:group-hover:h-52 group-hover:h-32 opacity-100 md:opacity-0 md:group-hover:opacity-100 absolute lg:group-hover:-translate-y-40 md:group-hover:-translate-y-32 group-hover:-translate-y-20 duration-1000 rounded-xl shadow-xl overflow-hidden"
+            >
+              <img src="assets/images/mixer1.jpg" alt="" />
+            </div>
+          </div>
+          <div class="flex items-end justify-center group">
+            <img class="w-1/2" src="assets/images/cookiec.png" alt="" />
+            <div
+              class="lg:w-72 md:w-52 w-32 h-0 lg:group-hover:h-72 md:group-hover:h-52 group-hover:h-32 opacity-100 md:opacity-0 md:group-hover:opacity-100 absolute lg:group-hover:-translate-y-40 md:group-hover:-translate-y-32 group-hover:-translate-y-20 duration-1000 rounded-xl shadow-xl overflow-hidden"
+            >
+              <img src="assets/images/cookie.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="recipe"
+        class="recipe bg-[url(../images/bg-4.png)] bg-cover bg-no-repeat min-h-screen md:h-screen flex flex-col justify-end items-center overflow-hidden lg:px-20 md:px-10 px-3 font-[writing] relative"
+      >
+        <h1
+          class="text-center absolute top-0 text-4xl font-[cute] text-white mt-10"
+        >
+          Recipe
+        </h1>
+        <div
+          class="flipbox [perspective:1000px] absolute top-[15%] md:w-1/3 md:h-[276px] h-[212px] w-[85%] group shadow-xl"
+        >
+          <div
+            class="flip-inner relative w-full h-full text-center duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]"
+          >
+            <div
+              class="flip-front absolute w-full h-full [backface-visibility:hidden] [-webkit-backface-visibility:hidden]"
+            >
+              <img
+                class="w-full h-full object-cover rounded-xl"
+                src="assets/images/cheesecake.jpg"
+                alt=""
+              />
+            </div>
+            <div
+              class="flip-back absolute w-full h-full [backface-visibility:hidden] [-webkit-backface-visibility:hidden] [transform:rotateY(180deg)] rounded-xl overflow-hidden"
+            >
+              <div
+                class="slideshow-container relative bg-white text-xl md:h-56 h-40 flex justify-center items-center"
+              >
+                <div class="mySlides px-12 hidden text-center">
+                  <p>Preheat Oven</p>
+                </div>
+
+                <div class="mySlides px-12 hidden text-center">
+                  <p>Pour all ingredients into blender</p>
+                </div>
+
+                <div class="mySlides px-12 hidden text-center">
+                  <p>Blend until well mixed</p>
+                </div>
+
+                <div class="mySlides px-12 hidden text-center">
+                  <p>
+                    Pour the batter into cake mould and bake at 180℃ for 30mins
+                  </p>
+                </div>
+
+                <div class="mySlides px-12 hidden text-center">
+                  <p>Enjoy with a cup of tea</p>
+                </div>
+
+                <a
+                  class="prev cursor-pointer absolute top-1/2 -translate-y-1/2 w-auto p-4 text-red-200 font-bold text-xl rounded-[0_3px_3px_0] select-none left-0"
+                  onclick="plusSlides(-1)"
+                  >❮</a
+                >
+                <a
+                  class="next cursor-pointer absolute top-1/2 -translate-y-1/2 w-auto p-4 text-red-200 font-bold text-xl rounded-[3px_0_0_3px] select-none right-0"
+                  onclick="plusSlides(1)"
+                  >❯</a
+                >
+              </div>
+
+              <div class="dot-container text-center p-3 bg-white">
+                <span
+                  class="dot pointer h-3 w-3 my-1 bg-red-100 rounded-full inline-block duration-500"
+                  onclick="currentSlide(1)"
+                ></span>
+                <span
+                  class="dot pointer h-3 w-3 my-1 bg-red-100 rounded-full inline-block duration-500"
+                  onclick="currentSlide(2)"
+                ></span>
+                <span
+                  class="dot pointer h-3 w-3 my-1 bg-red-100 rounded-full inline-block duration-500"
+                  onclick="currentSlide(3)"
+                ></span>
+                <span
+                  class="dot pointer h-3 w-3 my-1 bg-red-100 rounded-full inline-block duration-500"
+                  onclick="currentSlide(4)"
+                ></span>
+                <span
+                  class="dot pointer h-3 w-3 my-1 bg-red-100 rounded-full inline-block duration-500"
+                  onclick="currentSlide(5)"
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-wrap w-full justify-evenly gap-7 gap-y-12 content-end"
+        >
+          <div
+            class="bg-white md:rounded-t-xl rounded-xl group shadow-2xl relative p-3 md:hover:pb-20 duration-500 md:w-[15%] sm:w-40 w-20"
+          >
+            <input
+              type="checkbox"
+              id="checkbox1"
+              class="hidden peer checkbox"
+            />
+            <label
+              for="checkbox1"
+              class="w-full m-auto aspect-1 absolute -translate-y-1/2 top-0 left-1/2 -translate-x-1/2 rounded-full group-hover:w-3/5 peer-checked:w-3/5 group-hover:shadow-lg peer-checked:shadow-lg peer-checked:bg-pink-100 bg-white flex justify-center items-center duration-500 cursor-pointer"
+            >
+              <img class="w-2/5" src="assets/images/cheese.png" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="tick-icon w-2/5 absolute opacity-0 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+              >
+                <path fill="none" d="M0 0h24v24H0V0z" />
+                <path
+                  d="M9 16.2l-3.5-3.5c-.39-.39-1.02-.39-1.41 0s-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0L20.3 8.7c.39-.39.39-1.02 0-1.41s-1.02-.39-1.41 0L9 16.2z"
+                />
+              </svg>
+            </label>
+            <h1 class="text-center mt-[50%] lg:text-xl">Cream cheese</h1>
+            <p
+              class="text-center opacity-100 md:opacity-0 md:group-hover:opacity-100 duration-150 peer-checked:opacity-100"
+            >
+              500g
+            </p>
+          </div>
+          <div
+            class="bg-white md:rounded-t-xl rounded-xl group shadow-2xl relative p-3 md:hover:pb-20 duration-500 md:w-[15%] sm:w-40 w-20"
+          >
+            <input
+              type="checkbox"
+              id="checkbox2"
+              class="hidden peer checkbox"
+            />
+            <label
+              for="checkbox2"
+              class="w-full m-auto aspect-1 absolute -translate-y-1/2 top-0 left-1/2 -translate-x-1/2 rounded-full group-hover:w-3/5 peer-checked:w-3/5 group-hover:shadow-lg peer-checked:shadow-lg peer-checked:bg-pink-100 bg-white flex justify-center items-center duration-500 cursor-pointer"
+            >
+              <img class="w-2/5" src="assets/images/egg.png" alt="" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="tick-icon w-2/5 absolute opacity-0 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+              >
+                <path fill="none" d="M0 0h24v24H0V0z" />
+                <path
+                  d="M9 16.2l-3.5-3.5c-.39-.39-1.02-.39-1.41 0s-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0L20.3 8.7c.39-.39.39-1.02 0-1.41s-1.02-.39-1.41 0L9 16.2z"
+                />
+              </svg>
+            </label>
+            <h1 class="text-center mt-[50%] lg:text-xl">Eggs</h1>
+            <p
+              class="text-center opacity-100 md:opacity-0 md:group-hover:opacity-100 duration-150 peer-checked:opacity-100"
+            >
+              5
+            </p>
+          </div>
+          <div
+            class="bg-white md:rounded-t-xl rounded-xl group shadow-2xl relative p-3 md:hover:pb-20 duration-500 md:w-[15%] sm:w-40 w-20"
+          >
+            <input
+              type="checkbox"
+              id="checkbox3"
+              class="hidden peer checkbox"
+            />
+            <label
+              for="checkbox3"
+              class="w-full m-auto aspect-1 absolute -translate-y-1/2 top-0 left-1/2 -translate-x-1/2 rounded-full group-hover:w-3/5 peer-checked:w-3/5 group-hover:shadow-lg peer-checked:shadow-lg peer-checked:bg-pink-100 bg-white flex justify-center items-center duration-500 cursor-pointer"
+            >
+              <img class="w-2/5" src="assets/images/milk.png" alt="" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="tick-icon w-2/5 absolute opacity-0 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+              >
+                <path fill="none" d="M0 0h24v24H0V0z" />
+                <path
+                  d="M9 16.2l-3.5-3.5c-.39-.39-1.02-.39-1.41 0s-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0L20.3 8.7c.39-.39.39-1.02 0-1.41s-1.02-.39-1.41 0L9 16.2z"
+                />
+              </svg>
+            </label>
+            <h1 class="text-center mt-[50%] lg:text-xl md:text-base text-sm">
+              Whipping cream
+            </h1>
+            <p
+              class="text-center opacity-100 md:opacity-0 md:group-hover:opacity-100 duration-150 peer-checked:opacity-100"
+            >
+              2 cups
+            </p>
+          </div>
+          <div
+            class="bg-white md:rounded-t-xl rounded-xl group shadow-2xl relative p-3 md:hover:pb-20 duration-500 md:w-[15%] sm:w-40 w-20"
+          >
+            <input
+              type="checkbox"
+              id="checkbox4"
+              class="hidden peer checkbox"
+            />
+            <label
+              for="checkbox4"
+              class="w-full m-auto aspect-1 absolute -translate-y-1/2 top-0 left-1/2 -translate-x-1/2 rounded-full group-hover:w-3/5 peer-checked:w-3/5 group-hover:shadow-lg peer-checked:shadow-lg peer-checked:bg-pink-100 bg-white flex justify-center items-center duration-500 cursor-pointer"
+            >
+              <img class="w-2/5" src="assets/images/sugar.png" alt="" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="tick-icon w-2/5 absolute opacity-0 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+              >
+                <path fill="none" d="M0 0h24v24H0V0z" />
+                <path
+                  d="M9 16.2l-3.5-3.5c-.39-.39-1.02-.39-1.41 0s-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0L20.3 8.7c.39-.39.39-1.02 0-1.41s-1.02-.39-1.41 0L9 16.2z"
+                />
+              </svg>
+            </label>
+            <h1 class="text-center mt-[50%] lg:text-xl">Sugar</h1>
+            <p
+              class="text-center opacity-100 md:opacity-0 md:group-hover:opacity-100 duration-150 peer-checked:opacity-100"
+            >
+              200g
+            </p>
+          </div>
+          <div
+            class="bg-white md:rounded-t-xl rounded-xl group shadow-2xl relative p-3 md:hover:pb-20 duration-500 md:w-[15%] sm:w-40 w-20"
+          >
+            <input
+              type="checkbox"
+              id="checkbox5"
+              class="hidden peer checkbox"
+            />
+            <label
+              for="checkbox5"
+              class="w-full m-auto aspect-1 absolute -translate-y-1/2 top-0 left-1/2 -translate-x-1/2 rounded-full group-hover:w-3/5 peer-checked:w-3/5 group-hover:shadow-lg peer-checked:shadow-lg peer-checked:bg-pink-100 bg-white flex justify-center items-center duration-500 cursor-pointer"
+            >
+              <img class="w-2/5" src="assets/images/flour.png" alt="" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="tick-icon w-2/5 absolute opacity-0 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+              >
+                <path fill="none" d="M0 0h24v24H0V0z" />
+                <path
+                  d="M9 16.2l-3.5-3.5c-.39-.39-1.02-.39-1.41 0s-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0L20.3 8.7c.39-.39.39-1.02 0-1.41s-1.02-.39-1.41 0L9 16.2z"
+                />
+              </svg>
+            </label>
+            <h1 class="text-center mt-[50%] lg:text-xl">Flour</h1>
+            <p
+              class="text-center opacity-100 md:opacity-0 md:group-hover:opacity-100 duration-150 peer-checked:opacity-100"
+            >
+              30g
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        id="fun"
+        class="fun relative min-h-screen bg-[url(../images/bg-2.png)] bg-cover bg-no-repeat"
+      >
+        <h1 class="text-center text-4xl font-[cute] text-white py-20">
+          <span
+            ><img class="w-60 hidden sm:inline" src="assets/images/div.png"
+          /></span>
+          Fun facts
+          <span
+            ><img
+              class="sm:inline hidden w-60 -scale-x-100"
+              src="assets/images/div.png"
+          /></span>
+        </h1>
+        <div
+          class="relative flex justify-around items-center flex-wrap gap-y-5"
+        >
+          <div class="card relative cursor-pointer group rounded-xl">
+            <div
+              class="face face1 group-hover:rounded-b-none rounded-xl w-[300px] h-[200px] duration-300 relative bg-red-200 flex justify-center items-center z-[1] md:translate-y-[100px] group-hover:bg-red-300 group-hover:translate-y-0"
+            >
+              <div class="content">
+                <h3 class="m-[10px_0_0] p-0 text-white text-center text-xl">
+                  Butter vs. Margarine
+                </h3>
+              </div>
+            </div>
+            <div
+              class="face w-[300px] h-[200px] duration-300 face2 group-hover:rounded-t-none rounded-xl relative bg-white flex justify-center items-center p-5 box-border md:translate-y-[-100px] group-hover:translate-y-0 shadow-xl"
+            >
+              <div class="content">
+                <p>
+                  While butter adds richness and flavor, margarine can be a
+                  suitable substitute for those looking for a dairy-free option.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card relative cursor-pointer group">
+            <div
+              class="face face1 group-hover:rounded-b-none rounded-xl w-[300px] h-[200px] duration-300 relative bg-red-200 flex justify-center items-center z-[1] md:translate-y-[100px] group-hover:bg-red-300 group-hover:translate-y-0"
+            >
+              <div class="content">
+                <h3 class="m-[10px_0_0] p-0 text-white text-center text-xl">
+                  The Art of Mixing
+                </h3>
+              </div>
+            </div>
+            <div
+              class="face w-[300px] h-[200px] duration-300 face2 group-hover:rounded-t-none rounded-xl relative bg-white flex justify-center items-center p-5 box-border md:translate-y-[-100px] group-hover:translate-y-0 shadow-xl"
+            >
+              <div class="content">
+                <p>
+                  Mixing techniques, such as creaming, folding, and whipping,
+                  are important in achieving the desired texture and consistency
+                  in baked goods.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card relative cursor-pointer group">
+            <div
+              class="face face1 rounded-xl group-hover:rounded-b-none w-[300px] h-[200px] duration-300 relative bg-red-200 flex justify-center items-center z-[1] md:translate-y-[100px] group-hover:bg-red-300 group-hover:translate-y-0"
+            >
+              <div class="content">
+                <h3 class="m-[10px_0_0] p-0 text-white text-center text-xl">
+                  The Magic of Leavening
+                </h3>
+              </div>
+            </div>
+            <div
+              class="face w-[300px] h-[200px] duration-300 face2 group-hover:rounded-t-none rounded-xl relative bg-white flex justify-center items-center p-5 box-border md:translate-y-[-100px] group-hover:translate-y-0 shadow-xl"
+            >
+              <div class="content">
+                <p>
+                  Leavening agents like yeast, baking powder, and baking soda
+                  create the bubbles that make the dough and batter rise,
+                  resulting in light and fluffy treats.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card relative cursor-pointer group">
+            <div
+              class="face face1 rounded-xl group-hover:rounded-b-none w-[300px] h-[200px] duration-300 relative bg-red-200 flex justify-center items-center z-[1] md:translate-y-[100px] group-hover:bg-red-300 group-hover:translate-y-0"
+            >
+              <div class="content">
+                <h3 class="m-[10px_0_0] p-2 text-white text-center text-xl">
+                  The Importance of Resting Dough
+                </h3>
+              </div>
+            </div>
+            <div
+              class="face w-[300px] h-[200px] duration-300 face2 group-hover:rounded-t-none rounded-xl relative bg-white flex justify-center items-center p-5 box-border md:translate-y-[-100px] group-hover:translate-y-0 shadow-xl"
+            >
+              <div class="content">
+                <p>
+                  Resting dough allows the gluten to relax, leading to better
+                  texture and easier shaping. It also allows flavors to develop
+                  and enhances the final product.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="memory-game min-h-screen bg-[url(../images/bg-2.png)] bg-cover flex flex-col justify-center items-center py-10 relative"
+      >
+        <div
+          class="relative gap-7 flex flex-col justify-center items-center py-20 rounded-lg w-4/5 lg:w-3/5"
+        >
+          <h1 class="text-center text-4xl font-[cute] text-pink-400">
+            Memory Game
+          </h1>
+          <div
+            class="game flex flex-wrap min-h-60 justify-center items-center max-w-80 lg:max-w-[500px]"
+          ></div>
+          <button
+            class="reset p-4 text-white bg-pink-500 rounded-lg font font-[writing] tracking-widest hover:shadow-xl duration-300 font-bold"
+            onclick="window.location.reload();"
+          >
+            Reset Game
+          </button>
+        </div>
+        <div
+          id="game-win"
+          class="absolute bg-white/60 p-8 rounded-2xl border-black/45 border-b-4 hidden backdrop-blur"
+        >
+          <img src="assets/images/game-cake.png" alt="" />
+          <h2
+            class="text-center font-[writing] font-bold bg-white rounded-xl mt-5 p-4"
+          >
+            You've successfully baked a cake!
+          </h2>
+        </div>
+      </section>
+    </main>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"
+      integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".tilt"), {
+        max: 25,
+        speed: 400,
+      });
+    </script>
+    <script src="./script.js"></script>
+  </body>
+</html>
