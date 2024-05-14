@@ -134,5 +134,4 @@ for (var i = 0; i < ingredients.length; i++) {
   };
   document.querySelector(".game").appendChild(gameBox);
 }
-
 document.querySelectorAll("game-item").style.position = "relative";
